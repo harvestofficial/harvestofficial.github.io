@@ -27,7 +27,7 @@
         100% { background-image: url('img5.jpg.png'); }
     }
 
-    /* Центр: большой логотип */
+    /* Огромный логотип по центру */
     .center {
         position: fixed;
         top: 50%; left: 50%;
@@ -37,9 +37,9 @@
     }
 
     .logo {
-        width: 600px; /* Увеличил логотип */
-        max-width: 90vw;
-        filter: drop-shadow(0 0 25px #fff);
+        width: 85vw;          /* почти весь экран */
+        max-width: 1200px;    /* ограничение, чтобы не ломалось */
+        filter: drop-shadow(0 0 40px white); /* мягкое белое свечение */
     }
 
     /* Видео — полноразмерное */
@@ -53,7 +53,7 @@
 
     .video {
         width: 100%;
-        height: auto; /* Полная высота без обрезания */
+        height: auto;
         display: block;
     }
 </style>

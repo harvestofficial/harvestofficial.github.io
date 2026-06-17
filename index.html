@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>HARVEST</title>
+
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html { width: 100%; height: 100%; background: #000; }
+    body, html { width: 100%; height: 100%; background: #000; overflow-x: hidden; }
 
     /* Фон-слайдер */
     .bg {
@@ -26,37 +27,38 @@
         100% { background-image: url('img5.jpg.png'); }
     }
 
-    /* Центр: логотип */
+    /* Центр: большой логотип */
     .center {
         position: fixed;
         top: 50%; left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 3;
         text-align: center;
-        z-index: 2;
     }
 
     .logo {
-        width: 300px;
-        filter: drop-shadow(0 0 20px #fff);
+        width: 600px; /* Увеличил логотип */
+        max-width: 90vw;
+        filter: drop-shadow(0 0 25px #fff);
     }
 
-    /* Видео снизу */
+    /* Видео — полноразмерное */
     .video-wrapper {
-        position: fixed;
-        bottom: 0; left: 0;
+        position: relative;
+        margin-top: 100vh; /* чтобы видео было под фоном */
         width: 100%;
-        z-index: 2;
-        background: rgba(0,0,0,0.6);
+        background: #000;
+        z-index: 4;
     }
 
     .video {
         width: 100%;
-        height: 30vh;
-        object-fit: cover;
+        height: auto; /* Полная высота без обрезания */
         display: block;
     }
 </style>
 </head>
+
 <body>
 
 <div class="bg"></div>
